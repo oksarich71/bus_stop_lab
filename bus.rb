@@ -12,10 +12,13 @@ class Bus
     return "Brum brum"
   end
 
-  def pick_up(passenger)
-    @passengers.push(passenger)
+  def pick_up(pedestrian)
+    @passengers.push(pedestrian)
   end
 
+  def drop_off(pedestrian)
+    @passengers.delete(pedestrian)
+  end
 
 
 
