@@ -6,8 +6,12 @@ class BusTest < MiniTest::Test
 
   def setup
 
-  @bus1 = Bus.new(22, "Ocean Terminal")
+  @passengers_array = []
+
+  @bus1 = Bus.new(22, "Ocean Terminal", @passengers_array)
+
   end
+
 
   def test_bus_route()
   assert_equal(22, @bus1.route)
@@ -21,6 +25,15 @@ class BusTest < MiniTest::Test
   def test_bus_drives()
     assert_equal("Brum brum", @bus1.drive)
 
+  end
+
+  def test_passengers()
+    assert_equal(@passengers_array,
+      @bus1.passengers)
+  end
+
+  def test_count_passengers()
+    assert_equal(0, @bus1.passengers.count)
   end
 
 end
