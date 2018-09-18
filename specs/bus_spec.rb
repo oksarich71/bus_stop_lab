@@ -58,7 +58,7 @@ class BusTest < MiniTest::Test
     person2 = Person.new("Becky", 15)
     @bus1.pick_up(person1)
     @bus1.pick_up(person2)
-    @passengers_array.clear()
+    @bus1.empty()
     assert_equal(0, @bus1.passengers.count)
   end
 

@@ -20,6 +20,8 @@ class Bus
     @passengers.delete(pedestrian)
   end
 
-
+  def empty()
+  @passengers.clear
+  end
 
 end
